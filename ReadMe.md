@@ -9,6 +9,6 @@
 
 #### Preview
 
-![Preview](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Preview")
+![Preview](https://raw.githubusercontent.com/malicoo/BuyCoins-Frontend-Engineer-Test/main/Preview.png "Preview")
 
 Ndifon Desmond Yong - [Email](mailto:hi@malico.me) - [Portofolio](//malico.me)
