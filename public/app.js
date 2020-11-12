@@ -15,7 +15,7 @@ const USER_LOGIN = "malicoo";
  *
  * @var {string}
  */
-const token = "05f1b0c656448db5cafbcb6b826399d59fd018e2";
+const token = "some_token";
 /**
  * Months
  *
@@ -243,7 +243,15 @@ const fetchData = () => {
         },
         body: JSON.stringify({ query }),
     })
-        .then((r) => r.json())
-        .then((data) => displaydata(data.data));
+        .then((r) => {
+        if (r.status === 401) {
+            alert("Authorization: check app.ts or app.js");
+        }
+        return r.json();
+    })
+        .then((data) => displaydata(data.data))
+        .catch((error) => {
+        console.log(error);
+    });
 };
 fetchData();

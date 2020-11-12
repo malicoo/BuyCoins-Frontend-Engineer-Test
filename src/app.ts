@@ -17,14 +17,14 @@ const USER_LOGIN: string = "malicoo";
  *
  * @var {string}
  */
-const token: string = "05f1b0c656448db5cafbcb6b826399d59fd018e2";
+const token: string = "some_token";
 
 /**
  * Months
  *
  * @var {array}
  */
-const months: [] = [
+const months: string[] = [
   "Jan",
   "Feb",
   "Mar",
@@ -100,7 +100,7 @@ const query = `{
  *
  * @return  {void}
  */
-const displayRepos = (repos: { nodes: Object[] }): void => {
+const displayRepos = (repos: { totalCount; nodes: { name; url }[] }): void => {
   // Display Total Number of Repos
   const totals = document.querySelectorAll("#total");
   totals.forEach((total) => {
@@ -217,7 +217,8 @@ const displayUserInfo = (user: {
   bio;
   login;
   status: object;
-  avatarUrl;
+  websiteUrl: string | null;
+  avatarUrl: string | null;
 }): void => {
   //    Avatars
   const avatars = document.querySelectorAll(".avatar");
@@ -280,8 +281,16 @@ const fetchData = (): void => {
     },
     body: JSON.stringify({ query }),
   })
-    .then((r) => r.json())
-    .then((data) => displaydata(data.data));
+    .then((r) => {
+      if (r.status === 401) {
+        alert("Authorization: check app.ts or app.js");
+      }
+      return r.json();
+    })
+    .then((data) => displaydata(data.data))
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 fetchData();
