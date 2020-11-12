@@ -1,0 +1,312 @@
+/* 
+author: Malico <hi@malico.me> - https://malico.me 
+*/
+* {
+  box-sizing: border-box;
+}
+
+figure,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  padding: 0;
+  font-size: 14px;
+  color: #24292e;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+.button {
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+}
+button:hover,
+.button:hover {
+  background: #d2d7dd;
+}
+button.success,
+.button.success {
+  color: #ffffff;
+  background: #2c9d4c;
+}
+
+input {
+  padding: 0;
+  background: transparent;
+  outline: none;
+  border: 0.5px solid;
+  color: inherit;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  border-color: currentColor;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* paddings  */
+.container {
+  padding: 0 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.py-2 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-2 {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pt-4 {
+  padding-top: 2rem;
+}
+
+.mr-1 {
+  margin-right: 0.3rem;
+}
+
+.mr-2 {
+  margin-right: 0.74rem;
+}
+
+.mr-3 {
+  margin-right: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.2rem;
+}
+
+.max-w {
+  max-width: 1248px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline {
+  display: inline;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.border-b {
+  border-bottom: 1px solid;
+}
+
+.border-gray {
+  border-color: #d2d7dd;
+}
+
+.space-x-between > :first-child {
+  margin-right: 0.5rem;
+}
+.space-x-between > :not(:first-child),
+.space-x-between > :not(:last-child) {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.space-x-between > :last-child {
+  margin-left: 0.5rem;
+}
+
+.space-x-between-sm > :first-child {
+  margin-right: 0.5rem;
+}
+.space-x-between-sm > :not(:first-child),
+.space-x-between-sm > :not(:last-child) {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.space-x-between-sm > :last-child {
+  margin-left: 0.5rem;
+}
+
+ion-icon.large-icon {
+  font-size: 20px;
+}
+
+ion-icon.small-icon {
+  font-size: 12px;
+}
+
+header {
+  color: #ffffff;
+  background: #1b1f23;
+}
+header form > input {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  color: grey;
+}
+header form > input:focus {
+  width: calc(100vw / 4);
+  color: #1b1f23;
+  background: #ffffff;
+}
+header .notification {
+  position: relative;
+}
+header .notification .dot {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  background: #1b1f23;
+  padding: 0.05rem;
+}
+header .notification .dot ion-icon {
+  font-size: 12px;
+  color: #006eed;
+}
+header .avatar {
+  width: 20px;
+  margin-right: 3px;
+  border-radius: 999px;
+}
+
+.page-menu a {
+  color: #1d2226;
+  padding: 1rem 1rem;
+  border-bottom: 3px solid transparent;
+}
+.page-menu a:hover {
+  border-color: #d2d7dd;
+}
+.page-menu a.active {
+  color: inherit;
+  font-weight: bold;
+  border-color: #f9826c;
+}
+.page-menu a #total {
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: #d2d7dd;
+  font-weight: normal;
+}
+
+.w-aside {
+  margin-top: -35px;
+  width: 25%;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+.w-aside #name {
+  margin-top: 15px;
+  line-height: 0;
+}
+.w-aside #username {
+  font-weight: normal;
+  color: #1b1f23;
+}
+.w-aside .user-avatar {
+  position: relative;
+}
+.w-aside .user-avatar .icon {
+  position: absolute;
+  left: 90%;
+  top: 70%;
+  height: 35px;
+  width: 35px;
+  background-color: #ffffff;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.w-aside .user-avatar .icon .message {
+  display: none;
+  font-size: xx-small;
+  margin-left: 7px;
+}
+.w-aside .user-avatar .icon:hover {
+  width: auto;
+}
+.w-aside .user-avatar .icon:hover .message {
+  display: inline;
+}
+.w-aside .avatar {
+  border-radius: 50%;
+}
+
+.w-main {
+  width: 75%;
+}
+
+.lang-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+}
+
+.repo .title {
+  color: #0164d5;
+}
+.repo .topics {
+  margin-bottom: 0.75rem;
+}
+.repo .topics .topic {
+  background: #dbecfd;
+  padding: 0.3rem 0.5rem;
+  border-radius: 15px;
+  color: #0164d5;
+}
+
+/*# sourceMappingURL=app.css.map */
