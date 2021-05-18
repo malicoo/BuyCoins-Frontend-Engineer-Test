@@ -1,1 +1,5 @@
-chmod +x ./bin/env.sh && ./bin/env.sh > public/env.js
+[build]
+
+    publish = "public/"
+    
+    command = "chmod +x ./bin/env.sh && ./bin/env.sh > public/env.js"
