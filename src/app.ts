@@ -11,7 +11,7 @@ const API_URL: string = "https://api.github.com/graphql";
  *
  * @var {string}
  */
-const token: string = "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";
+const token: string = window.env.PUBLIC_URL;
 
 /**
  * Months

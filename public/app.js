@@ -9,7 +9,7 @@ var API_URL = "https://api.github.com/graphql";
  *
  * @var {string}
  */
-var token = "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";
+var token = window.env.PUBLIC_URL;
 /**
  * Months
  *
